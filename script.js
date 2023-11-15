@@ -1,8 +1,11 @@
 let secretNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20;
-let highScore =
-  parseInt(localStorage.getItem('highScore')) ||
-  localStorage.setItem('highScore', 0);
+let highScore = parseInt(localStorage.getItem('highScore'))
+
+if(!highScore){
+  localStorage.setItem('highScore', 0)
+  highScore = parseInt(localStorage.getItem('highScore'))
+}
 document.addEventListener('DOMContentLoaded', e => {
   document.querySelector('.highscore').textContent = highScore;
 });
