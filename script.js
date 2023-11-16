@@ -1,10 +1,10 @@
 let secretNumber = Math.floor(Math.random() * 20) + 1;
 let score = 20;
-let highScore = parseInt(localStorage.getItem('highScore'))
+let highScore = parseInt(localStorage.getItem('highScore'));
 
-if(!highScore){
-  localStorage.setItem('highScore', 0)
-  highScore = parseInt(localStorage.getItem('highScore'))
+if (!highScore) {
+  localStorage.setItem('highScore', 0);
+  highScore = parseInt(localStorage.getItem('highScore'));
 }
 document.addEventListener('DOMContentLoaded', e => {
   document.querySelector('.highscore').textContent = highScore;
@@ -72,3 +72,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
 });
+
+// Author : Muhammad Bhutta
